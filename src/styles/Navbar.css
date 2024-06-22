@@ -11,7 +11,7 @@
 
 .navbar {
     margin-right: 10px;
-    padding: 4px;
+    padding-bottom: 6px;
     background-color: var(--mid-orange);
     position: fixed;
     top: 0;
@@ -22,10 +22,35 @@
     border-bottom-right-radius: 10px;
 }
 
-.navbar :hover {
-    background-color: var(--pink);
-    color: var(--mid-orange);
-    border: none;
+.nav-item {
+    text-decoration: none;
+    padding: 13px;
+}
+
+.nav-item:hover {
+    background-color: var(--orange);
+}
+
+.nav-item.active {
+    background-color: var(--orange);
+}
+
+.nav-item:hover:first-child {
+    background-color: var(--orange);
     border-bottom-left-radius: 10px;
+}
+
+.nav-item.active:first-child {
+    background-color: var(--orange);
+    border-bottom-left-radius: 10px;
+}
+
+.nav-item:hover:last-child {
+    background-color: var(--orange);
+    border-bottom-right-radius: 10px;
+}
+
+.nav-item.active:last-child {
+    background-color: var(--orange);
     border-bottom-right-radius: 10px;
 }
