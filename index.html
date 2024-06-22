@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+<!--     <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+    <link rel='stylesheet' type='text/css' href='cursor-style.css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Head</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+  <script type="module">
+    import { rainbowCursor } from "https://unpkg.com/cursor-effects@latest/dist/esm.js";
+  
+    new rainbowCursor({
+      length: 30,
+      colors: [ "#de4343", "#ffaa00"], 
+      size: 5,
+    });
+  </script>
+</html>

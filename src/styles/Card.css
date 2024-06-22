@@ -1,0 +1,22 @@
+.head-card {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    background-color: var(--light-pink);
+}
+
+.card-image {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.card-link {
+    text-decoration: none;
+    color: var(--pink);
+    font-size: 18px;
+}

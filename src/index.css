@@ -1,0 +1,44 @@
+:root {
+  font-family: GothamRounded;
+  line-height: 2;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgb(255, 255, 255);
+  background-color: var(--pink); /* heart background color */
+  --mid-orange: #ffaa00;
+  --orange: #F9A334;
+  --yellow: #ffd83f;
+  --blue: #42d6ff;
+  --pink: #BE1E2D;
+  --light-pink: #e37575;
+  --dark-green: #5e9d00;
+  --green: #b7cc31;
+}
+
+@font-face {
+  font-family: 'GothamRounded';
+  src: url('./assets/fonts/gothamrnd_light.ttf');
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--pink);
+  border-radius: 10px;
+  border: none;
+}
+
+::-webkit-input-placeholder {
+  color: #ffffff;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 100;
+  opacity: 0.5;
+}

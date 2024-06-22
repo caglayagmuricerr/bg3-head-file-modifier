@@ -1,0 +1,67 @@
+.card {
+    border: 2px solid var(--light-pink);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: var(--light-pink);
+    display: inline-block;
+}
+
+.version-input {
+    width: 50px;
+    height: auto;
+    padding: 4px;
+    background-color: var(--pink);
+    border: 1px solid var(--light-pink);
+}
+
+.version-input:focus {
+    background-color: var(--light-pink);
+}
+
+.result-card {
+    position: relative;
+    border: 4px solid var(--light-pink);
+    padding: 20px 60px 0px 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: var(--light-pink);
+    display: inline-block;
+}
+
+.copy-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 5px 10px;
+    background-color: var(--dark-green);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.labels-row {
+    display: flex;
+    justify-content: start;
+    margin-bottom: 10px;
+}
+
+.labels-row label {
+    margin-right: 15px;
+    color: var(--pink);
+}
+
+.labels-row label:last-child {
+    margin-right: 0;
+}
+
+.inputs-row {
+    display: flex;
+    justify-content: start;
+}
+
+.version-label {
+    display: flex;
+    padding-left: 10px;
+}
