@@ -51,7 +51,6 @@ const VersionCalculator = () => {
 
   return (
     <div>
-      <h2>Calculate Version</h2>
       <div className="card">
         <div className="labels-row">
           <label>Major</label>

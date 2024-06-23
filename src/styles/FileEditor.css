@@ -29,9 +29,16 @@
   box-shadow: 0 0 3px 3px var(--light-pink);
 }
 
-.start-renaming {
-  background-color: var(--light-pink);
+.download-button {
+  background-color: var(--dark-pink);
   padding: 10px;
-  border: none;
+  margin-top: 20px;
+  border: 5px dashed var(--light-pink);
   border-radius: 10px;
+  color: var(--light-pink);
+}
+
+.calculate-version {
+  text-decoration: none;
+  color: white;
 }

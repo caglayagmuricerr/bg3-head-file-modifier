@@ -2,10 +2,11 @@
     display: flex;
     align-items: center;
     margin: 10px 0;
-    padding: 10px;
+    padding: 10px 30px 10px 15px;
     border: 5px solid var(--pink);
     border-radius: 15px;
     background-color: var(--light-pink);
+    position: relative; /* Added to position the tooltip correctly */
 }
 
 .head-card:hover {
@@ -17,7 +18,12 @@
     width: 100px;
     height: auto;
     margin-right: 20px;
+    border: 5px solid var(--pink);
     border-radius: 10px;
+}
+
+.card-image:hover {
+    border: 5px solid var(--light-pink);
 }
 
 .card-link {
@@ -34,4 +40,15 @@
 .image-name {
     margin-bottom: 60px;
     font-size: 1.5em;
+}
+
+.hover-display-image {
+    position: fixed;
+    z-index: 10;
+}
+
+.full-size-image {
+    border-radius: 20px;
+    width: 400px;
+    height: auto;
 }

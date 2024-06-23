@@ -45,16 +45,15 @@ const Instructions = () => {
             ×
           </button>
           <p>
-            This isn't to replace any existing tools.
+            This website is not intended to replace any existing tools. 
+            Instead, it offers an alternative for players who wish to create a custom head 
+            for their character without the hassle of editing files or searching for tutorials online.            
             <br />
-            It's an alternative for players who want to create a custom head for their
-            character but don't want to edit files/search for tutorials all over the internet.
+            Please note that I cannot automate the Blender and DDS editing processes.
+            You'll need to handle those aspects yourself. 
+            I've included some resources to assist you in that.
             <br /> 
-            I can't automate the blender part and editing DDS's. That's up to you.
-            I've included some resources to help you.
-            <br />
-            This website may become outdated once official mod support is
-            introduced.
+            This website may become outdated once official mod support is introduced.
             <br />
             Also this might not work with unique races.(i.e. Dragonborn,
             Githyanki) but it should work fine with human like races. (i.e.
@@ -70,12 +69,12 @@ const Instructions = () => {
           rel="noopener noreferrer"
           onMouseEnter={() =>
             handleMouseEnter(
-              "Use this template if you don't have the Unique Tav mod installed."
+              "Use this if you don't have the Unique Tav mod installed."
             )
           }
           onMouseLeave={handleMouseLeave}
         >
-          Vanilla
+          Vanilla Template
         </a>
         <a
           href="https://drive.google.com/file/d/1-geNURHk_Bi3mMeW69NJL0WgXUwzeEGL/view?usp=sharing"
@@ -83,12 +82,12 @@ const Instructions = () => {
           rel="noopener noreferrer"
           onMouseEnter={() =>
             handleMouseEnter(
-              "Use this template if you have the Unique Tav mod installed."
+              "Use this if you have the Unique Tav mod installed."
             )
           }
           onMouseLeave={handleMouseLeave}
         >
-          Unique Tav Compatible
+          Unique Tav Template
         </a>
       </div>
       <div className="tooltip" style={tooltipStyle}>

@@ -15,13 +15,13 @@ function App() {
     <div className="main">
       <Router>
         <Navbar />
-        <a
+{/*         <a
         href="https://main.d3gk1d0sba0003.amplifyapp.com/"
         target="_blank"
         rel="noopener noreferrer"
       >
         <h1 className="hush">🤫</h1>
-      </a>
+      </a> */}
       <a
         href="https://github.com/caglayagmuricerr/bg3-head-file-modifier/tree/main"
         target="_blank"

@@ -33,25 +33,50 @@ body {
 
 label {
   font-size: 1rem;
-  font-weight: bold;
-  color: var(--light-pink);
+
+  color: var(--dark-pink);
 }
 
 input[type="text"] {
   font-size: 1rem;
   padding: 10px 15px 10px 15px;
   margin: 5px;
-  border-radius: 5px;
-  border: none;
+  border-radius: 10px;
+  border: 5px solid var(--dark-pink);
   background-color: var(--light-pink);
   color: rgb(255, 208, 208);
 }
 
 input[type="text"]:focus {
   outline: none;
-  border: 1px solid var(--pink);
 }
 
 a {
   color: var(--yellow);
+}
+
+.github {
+  position: fixed;
+  bottom: 0;
+  left: 15px;
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  opacity: 0.85;
+  z-index: 9999;
+}
+
+.github:hover {
+  opacity: 1;
+}
+
+.hush {
+  position: fixed;
+  bottom: 0;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  opacity: 0.85;
+  z-index: 9999;
 }

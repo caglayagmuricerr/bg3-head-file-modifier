@@ -1,29 +1,29 @@
 .grid-container {
     display: grid;
-    padding: 10px;
-    background-color:var(--light-pink);
+    padding: 8px;
+    background-color: var(--light-pink);
     grid-template-columns: repeat(3, 1fr);
-    border: 15px solid var(--pink);
+    border: 15px double var(--dark-pink);
     border-radius: 30px;
 }
 
 .grid-container button {
     padding: 10px;
     font-size: 14px;
-    background-color: var(--pink);
+    background-color: var(--dark-pink);
+    border: 5px solid var(--darker-pink);
     color: var(--light-pink);
-    border: 5px solid var(--light-pink);
     border-radius: 10px;
 }
 
 .grid-container button:hover {
-    background-color: var(--light-pink);
-    border: 5px solid var(--pink);
-    color: var(--pink);
+    background-color: var(--pink);
+    border: 5px solid var(--dark-pink);
+    color: var(--light-pink);
 }
 
 button.selected {
-    background-color: var(--light-pink);
-    border: 5px solid var(--pink);
-    color: var(--pink);
+    background-color: var(--pink);
+    border: 5px solid var(--dark-pink);
+    color: var(--light-pink);
 }

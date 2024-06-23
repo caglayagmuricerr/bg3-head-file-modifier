@@ -316,7 +316,7 @@ const FileEditor = () => {
           value="Template_Vanilla"
           onChange={(e) => setOldWord(e.target.value)}
           onMouseEnter={() =>
-            handleTooltipShow("Select this for Vanilla template.")
+            handleTooltipShow("Select this if you downloaded Vanilla template.")
           }
           onMouseLeave={handleTooltipHide}
         />
@@ -328,7 +328,7 @@ const FileEditor = () => {
           value="Template_UTAV"
           onChange={(e) => setOldWord(e.target.value)}
           onMouseEnter={() =>
-            handleTooltipShow("Select this for Unique Tav Version template.")
+            handleTooltipShow("Select this if you downloaded Unique Tav template.")
           }
           onMouseLeave={handleTooltipHide}
         />
@@ -348,7 +348,7 @@ const FileEditor = () => {
           type="text"
           value={newWord}
           onChange={(e) => setNewWord(e.target.value)}
-          placeholder="Eirlys Head"
+          placeholder="Eirlys"
         />
         <a
           href="#"
@@ -479,6 +479,16 @@ const FileEditor = () => {
         </a>
       </div>
       <div>
+        <a 
+          href="#"
+          className="calculate-version"
+          onMouseEnter={() =>
+            handleTooltipShow("Start from 1.0.0.0 and update the version number or don't. I don't think it matters that much unless you are a serious modder.")
+          }
+          onMouseLeave={handleTooltipHide}
+        >
+          <h2>Calculate Version</h2>
+        </a>
         <VersionCalculator />
       </div>
       <div>
@@ -497,7 +507,7 @@ const FileEditor = () => {
           onMouseLeave={handleTooltipHide}
         />
       </div>
-      <button className="start-renaming" onClick={handleRenameAndDownload}>
+      <button className="download-button" onClick={handleRenameAndDownload}>
         Download Files
       </button>
       {tooltipContent && (
