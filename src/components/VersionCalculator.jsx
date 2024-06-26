@@ -94,14 +94,12 @@ const VersionCalculator = () => {
         </div>
       </div>
       <br />
-      {number !== null && (
-        <div className="result-card">
-          <button className="copy-button" onClick={handleCopy}>
-            {copyStatus ? "Copied!" : "Copy"}
-          </button>
-          <p>{number}</p>
-        </div>
-      )}
+      <div className="result-card">
+        <button className="copy-button" onClick={handleCopy}>
+          {copyStatus ? "Copied!" : "Copy"}
+        </button>
+        <p>{number}</p>
+      </div>
     </div>
   );
 };

@@ -308,6 +308,7 @@ const FileEditor = () => {
 
   return (
     <div className="file-editor-container" onMouseMove={handleMouseMove}>
+      <h3 className="start-editing">Start Editing!</h3>
       <div className="radio-group">
         <input
           type="radio"
@@ -328,7 +329,9 @@ const FileEditor = () => {
           value="Template_UTAV"
           onChange={(e) => setOldWord(e.target.value)}
           onMouseEnter={() =>
-            handleTooltipShow("Select this if you downloaded Unique Tav template.")
+            handleTooltipShow(
+              "Select this if you downloaded Unique Tav template."
+            )
           }
           onMouseLeave={handleTooltipHide}
         />
@@ -370,7 +373,9 @@ const FileEditor = () => {
         />
         <a
           href="#"
-          onMouseEnter={() => handleTooltipShow("Author name shown in Mod Manager.")}
+          onMouseEnter={() =>
+            handleTooltipShow("Author name shown in Mod Manager.")
+          }
           onMouseLeave={handleTooltipHide}
         >
           <img src={questionmark} alt="Question Mark" />
@@ -479,11 +484,13 @@ const FileEditor = () => {
         </a>
       </div>
       <div>
-        <a 
+        <a
           href="#"
           className="calculate-version"
           onMouseEnter={() =>
-            handleTooltipShow("Start from 1.0.0.0 and update the version number or don't. I don't think it matters that much unless you are a serious modder.")
+            handleTooltipShow(
+              "Start from 1.0.0.0 and update the version number or don't. I don't think it matters that much unless you are a serious modder."
+            )
           }
           onMouseLeave={handleTooltipHide}
         >

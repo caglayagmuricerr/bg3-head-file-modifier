@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import FTCard from "../components/FaceTemplateCard";
 import EirlysImage from "../assets/images/card-images/Eirlys.png";
 import GizeImage from "../assets/images/card-images/Gize.png";
@@ -9,17 +8,15 @@ const FaceTemplates = () => {
     {
       image: EirlysImage,
       imageName: "Eirlys",
-      name: "eirlys",
       link: "https://drive.google.com/file/d/1dyso-IXo_zotspDhBwvJVrGG9AEFbVxJ/view?usp=sharing",
       text: "Human, Feminine Body Type, Standard Body",
     },
     {
       image: GizeImage,
       imageName: "Gize",
-      name: "gize",
       link: "https://drive.google.com/file/d/16iMB70lIWlS3g9ryUnIOCRgUjzYnK8Nj/view?usp=sharing",
       text: "Elf, Feminine Body Type, Standard Body",
-    }
+    },
   ];
 
   return (
@@ -40,18 +37,17 @@ const FaceTemplates = () => {
         <br />
         I recommend using the one of my heads as a base to customize.
         <br />
-        Because the heads are already set up with the correct lods and do not require any additional work.
+        These heads are already set up with the correct lods and do not
+        require any additional work.
       </p>
       <div className="cards-container">
         {cardsData.map((card, index) => (
-          <Link to={`/face-templates/${card.name}`} key={index}>
-            <FTCard
-              image={card.image}
-              imageName={card.imageName}
-              link={card.link}
-              text={card.text}
-            />
-          </Link>
+          <FTCard
+            image={card.image}
+            imageName={card.imageName}
+            link={card.link}
+            text={card.text}
+          />
         ))}
       </div>
     </div>

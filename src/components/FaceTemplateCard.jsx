@@ -22,7 +22,7 @@ const FaceTemplateCard = ({ image, imageName, text }) => {
   const updateTooltipPosition = (e) => {
     const xOffset = 20; 
     const yOffset = 10;
-    setTooltipPosition({ x: e.clientX + xOffset, y: e.clientY + yOffset });
+    setTooltipPosition({ x: e.clientX + xOffset, y: e.clientY + yOffset }); // client = mouse
   };
 
   return (

@@ -1,8 +1,19 @@
-.choose-template {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.template-btn {
+    padding: 10px;
+    margin: 20px;
+    color: var(--light-pink);
+    background-color: var(--dark-pink);
+    border: 5px solid var(--light-pink);
+    border-radius: 10px;
+    text-decoration: none;
+
+    z-index: 9999;
+}
+
+.template-btn:hover {
+    color: var(--dark-pink);
+    background-color: var(--light-pink);
+    border: 5px solid var(--dark-pink);
 }
 
 .tooltip {
@@ -12,7 +23,7 @@
     border-radius: 10px;
     padding: 10px;
     z-index: 9999;
-}
+}    
 
 .dev-msg {
     position: fixed;
@@ -27,32 +38,33 @@
     background-color: var(--mid-orange);
     overflow: auto;
     z-index: 9998;
-}
+}    
 
 .close-btn {
     position: absolute;
-    top: 5px;
+    top: 0px;
     right: 10px;
     padding: 5px;
     border: none;
+    width: 20px;
+    font-size: 1.5rem;
     background-color: var(--dark-orange);
-}
+}    
 
-.choose-template a {
-    text-decoration: none;
-    color: var(--light-pink);
+
+
+
+
+.other-res {
+    position: fixed;
+    top: 100px;
+    right: 10px;
     padding: 10px;
-    border: 5px solid var(--light-pink);
-    border-radius: 10px;
-    background-color: var(--dark-pink);
-}
-
-.choose-template a:hover {
-    color: var(--dark-pink);
+    border: none;
+    border-radius: 2vw;
+    width: 20%;
+    height: auto;
     background-color: var(--light-pink);
-    border: 5px solid var(--dark-pink);
-}
-
-.choose-template :last-child {
-    margin-top: 20px;
+    overflow: auto;
+    z-index: 9990;
 }
