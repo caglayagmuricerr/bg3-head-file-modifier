@@ -1,6 +1,6 @@
 import React from "react";
 import HeartBg from "../components/HeartBg";
-import Card from "../components/Card";
+import Card from "../components/FaceTemplateCard";
 import EirlysImage from "../assets/images/Eirlys.png";
 import GizeImage from "../assets/images/Gize.png";
 
@@ -10,13 +10,13 @@ const FaceTemplates = () => {
       image: EirlysImage,
       imageName: "Eirlys",
       link: "https://drive.google.com/file/d/1dyso-IXo_zotspDhBwvJVrGG9AEFbVxJ/view?usp=sharing",
-      linkText: "Human, Feminine Body Type, Standard Body",
+      text: "Human, Feminine Body Type, Standard Body",
     },
     {
       image: GizeImage,
       imageName: "Gize",
       link: "https://drive.google.com/file/d/16iMB70lIWlS3g9ryUnIOCRgUjzYnK8Nj/view?usp=sharing",
-      linkText: "Elf, Feminine Body Type, Standard Body",
+      text: "Elf, Feminine Body Type, Standard Body",
     }
   ];
 
@@ -36,6 +36,10 @@ const FaceTemplates = () => {
           head within the game
         </a>{" "}
         to customize.
+        <br />
+        I recommend using the one of my heads as a base to customize.
+        <br />
+        Because the heads are already set up with the correct lods and do not require any additional work.
       </p>
       <div className="cards-container">
         {cardsData.map((card, index) => (
@@ -44,7 +48,7 @@ const FaceTemplates = () => {
             image={card.image}
             imageName={card.imageName}
             link={card.link}
-            linkText={card.linkText}
+            text={card.text}
           />
         ))}
       </div>

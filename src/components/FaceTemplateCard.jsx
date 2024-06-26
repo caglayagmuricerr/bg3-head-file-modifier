@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/Card.css";
 
-const Card = ({ image, imageName, link, linkText }) => {
+const Card = ({ image, imageName, link, text }) => {
   const [isTooltipVisible, setTooltipVisible] = useState(false);
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
 
@@ -41,7 +41,7 @@ const Card = ({ image, imageName, link, linkText }) => {
           onMouseLeave={handleMouseLeave}
         />
         <div className="image-name">{imageName}<br/></div>
-        <div className="link-text">{linkText}</div>
+        <div className="link-text">{text}</div>
         {isTooltipVisible && (
           <div
             className="hover-display-image"
