@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "../styles/Card.css";
 
-const Card = ({ image, imageName, link, text }) => {
+const FaceTemplateCard = ({ image, imageName, text }) => {
   const [isTooltipVisible, setTooltipVisible] = useState(false);
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
 
@@ -25,34 +26,30 @@ const Card = ({ image, imageName, link, text }) => {
   };
 
   return (
-    <a
-      href={link}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="card-link"
-    >
-      <div className="head-card">
-        <img
-          src={image}
-          alt={imageName}
-          className="card-image"
-          onMouseEnter={handleMouseEnter}
-          onMouseMove={handleMouseMove}
-          onMouseLeave={handleMouseLeave}
-        />
-        <div className="image-name">{imageName}<br/></div>
-        <div className="link-text">{text}</div>
-        {isTooltipVisible && (
-          <div
-            className="hover-display-image"
-            style={{ left: tooltipPosition.x, top: tooltipPosition.y }}
-          >
-            <img src={image} alt={imageName} className="full-size-image" />
-          </div>
+    <div className="head-card">
+      <img
+        src={image}
+        alt={imageName}
+        className="card-image"
+        onMouseEnter={handleMouseEnter}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+      />
+      <div className="image-name">{imageName}<br/></div>
+      <div className="link-text">{text}</div>
+      {isTooltipVisible && (
+        <div
+          className="hover-display-image"
+          style={{ left: tooltipPosition.x, top: tooltipPosition.y }}
+        >
+          <img src={image} alt={imageName} className="full-size-image" />
+        </div>
         )}
-      </div>
-    </a>
+      <Link to={`/face-templates/${imageName.toLowerCase()}`} className="details-button">
+        Details
+      </Link>
+    </div>
   );
 };
 
-export default Card;
+export default FaceTemplateCard;

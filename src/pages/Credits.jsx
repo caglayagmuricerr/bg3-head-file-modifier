@@ -1,10 +1,8 @@
 import React from "react";
-import HeartBg from "../components/HeartBg";
 
 const Credits = () => {
   return (
     <div>
-      <HeartBg />
       <h1>Credits</h1>
       <p>
         🌈 I learned most of what I know from {" "}

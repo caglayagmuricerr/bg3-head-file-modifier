@@ -6,7 +6,6 @@
     border: 5px solid var(--pink);
     border-radius: 15px;
     background-color: var(--light-pink);
-    position: relative; /* Added to position the tooltip correctly */
 }
 
 .head-card:hover {
@@ -49,6 +48,6 @@
 
 .full-size-image {
     border-radius: 20px;
-    width: 400px;
+    width: 300px;
     height: auto;
 }
