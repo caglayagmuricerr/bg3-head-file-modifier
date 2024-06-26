@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "../styles/Card.css";
+import "../styles/FTCard.css";
 
 const FaceTemplateCard = ({ image, imageName, text }) => {
   const [isTooltipVisible, setTooltipVisible] = useState(false);
