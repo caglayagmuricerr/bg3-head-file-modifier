@@ -38,6 +38,12 @@
   color: var(--light-pink);
 }
 
+.download-button:hover {
+  background-color: var(--light-pink);
+  color: var(--dark-pink);
+  border: 5px dashed var(--dark-pink);
+}
+
 .calculate-version {
   text-decoration: none;
   color: white;

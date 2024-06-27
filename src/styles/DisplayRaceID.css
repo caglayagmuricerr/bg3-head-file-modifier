@@ -17,13 +17,13 @@
 }
 
 .grid-container button:hover {
-    background-color: var(--pink);
+    background-color: var(--light-pink);
     border: 5px solid var(--dark-pink);
-    color: var(--light-pink);
+    color: var(--dark-pink);
 }
 
 button.selected {
-    background-color: var(--pink);
+    background-color: var(--light-pink);
     border: 5px solid var(--dark-pink);
-    color: var(--light-pink);
+    color: var(--dark-pink);
 }

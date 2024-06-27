@@ -1,13 +1,14 @@
 import React from "react";
+import { useParams } from "react-router-dom";
+
 import FTDetailCard from "../components/FTDetailCard";
+
 import EirlysImage from "../assets/images/card-images/Eirlys.png";
 import GizeImage from "../assets/images/card-images/Gize.png";
-import { useParams } from "react-router-dom";
 
 const FaceDetail = () => {
   const { templateName } = useParams();
 
-  // Example data (you can fetch this dynamically based on templateName)
   const cardsData = {
     eirlys: {
       image: EirlysImage,
@@ -25,11 +26,8 @@ const FaceDetail = () => {
     },
   };
 
-  // Check if templateName exists in cardsData, otherwise handle not found scenario
   if (!cardsData[templateName]) {
-    console.log("Template name:", templateName); // Log templateName to console for debugging
-    console.log("Available templates:", Object.keys(cardsData)); // Log available templates for debugging
-    return <div>Template not found</div>; // Handle not found scenario
+    return <div>Template not found</div>;
   }
 
   const { image, imageName, description, link } = cardsData[templateName];

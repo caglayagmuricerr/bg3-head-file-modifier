@@ -35,7 +35,7 @@ const FaceTemplates = () => {
         </a>{" "}
         to customize.
         <br />
-        I recommend using the one of my heads as a base to customize.
+        I recommend using one of my heads as a base to customize.
         <br />
         These heads are already set up with the correct lods and do not
         require any additional work.
