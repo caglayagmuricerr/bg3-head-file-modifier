@@ -5,7 +5,7 @@ const Credits = () => {
     <div>
       <h1>Credits</h1>
       <p>
-        🌈 I learned most of what I know from {" "}
+        🌈 Learned a lot about modding from {" "}
         <a
           href="https://www.youtube.com/user/Padme4000"
           target="_blank"
@@ -64,10 +64,6 @@ const Credits = () => {
           rel="noopener noreferrer"
         >
           Tim Holman
-        </a>
-        <br />
-        <a href="https://vitejs.dev/" target="_blank" rel="noopener noreferrer">
-        🌈 💻 Built With Vite + React
         </a>
       </p>
     </div>

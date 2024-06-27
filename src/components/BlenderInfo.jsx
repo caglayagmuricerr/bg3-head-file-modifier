@@ -24,22 +24,24 @@ const BlenderInfo = () => {
         </a>
         <br />
         After Downloading and installing Blender
-        <br />⭐ You need to install the{" "}
+        <br />⭐ You need to install{" "}
         <a
           href="https://github.com/Norbyte/dos2de_collada_exporter"
           target="_blank"
           rel="noopener noreferrer"
         >
+          <br />
           Collada Exporter Plugin
         </a>
-        <br /> and{" "}
+        {" "}and{" "}
         <a
           href="https://github.com/Norbyte/lslib/releases"
           target="_blank"
           rel="noopener noreferrer"
         >
           LSlib
-        </a>{" "}
+        </a>
+        <br />
         Video About Installing The Plugin and LSlib »{" "}
         <a
           href="https://www.youtube.com/watch?v=yQSqRF7dLB8"

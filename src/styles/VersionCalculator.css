@@ -17,7 +17,7 @@
 }
 
 .version-input:focus {
-    background-color: var(--light-pink);
+    background-color: var(--pink);
 }
 
 .copy-button {
@@ -62,7 +62,7 @@
     position: relative;
     display: inline-block;
     margin-top: 20px;
-    padding: 20px 60px 0px 20px;
+    padding: 20px 20px 10px 20px;
     background-color: var(--light-pink);
     color : var(--dark-pink);
     border: 5px solid var(--dark-pink);

@@ -40,7 +40,8 @@ const Instructions = () => {
   return (
     <div>
       <div className="other-res">
-        <h3>Here are some other resources that you may find helpful 💖</h3> ❣️
+        <h3>Other resources you may find helpful 💖</h3>
+        ❣️
         <a
           href="https://bg3.wiki/wiki/Modding:Face_and_body_textures"
           target="_blank"
@@ -48,6 +49,31 @@ const Instructions = () => {
         >
           Editing DDS Files
         </a>
+        <br />
+        ❣️
+        <a
+          href="https://www.youtube.com/watch?v=RMPivc5qunw"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Editing Heads In Blender
+        </a>
+      </div>
+      <div className="video-tutorial">
+        <h3>Video Tutorial on Using This Website</h3>
+        <iframe
+          style={{
+            padding: "10px",
+            border: "10px dashed var(--light-pink)",
+            borderRadius: "15px",
+          }}
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/RMPivc5qunw"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
       </div>
       {showDevMsg && (
         <div className="dev-msg">
