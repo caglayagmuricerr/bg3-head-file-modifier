@@ -1,10 +1,9 @@
 import React, { useState } from "react";
+import Tooltip from "./utils/Tooltip"; // Make sure to adjust the path if needed
 import "../styles/DisplayRaceID.css";
 
 const DisplayRaceID = ({ setNewRaceUUID }) => {
   const [selectedUUID, setSelectedUUID] = useState("");
-  const [tooltipVisible, setTooltipVisible] = useState(false);
-  const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
 
   const buttonData = [
     { uuid: "78cd3bcc-1c43-4a2a-aa80-c34322c16a04", label: "Halfling" },
@@ -26,50 +25,25 @@ const DisplayRaceID = ({ setNewRaceUUID }) => {
     setSelectedUUID(uuid);
   };
 
-  const handleMouseEnter = (e) => {
-    setTooltipVisible(true);
-    updateTooltipPosition(e);
-  };
-
-  const handleMouseMove = (e) => {
-    updateTooltipPosition(e);
-  };
-
-  const handleMouseLeave = () => {
-    setTooltipVisible(false);
-  };
-
-  const updateTooltipPosition = (e) => {
-    const xOffset = 20;
-    const yOffset = 10;
-    setTooltipPosition({ x: e.clientX + xOffset, y: e.clientY + yOffset });
-  };
-
   return (
     <div className="raceid-div">
       <h2>Choose Race</h2>
+            <Tooltip
+        content={
+          <div>Choose this according to the Face Template you have chosen</div>
+        }
+      >
       <div className="grid-container">
         {buttonData.map((button) => (
           <button
-            key={button.uuid}
-            onClick={() => handleButtonClick(button.uuid)}
-            onMouseEnter={handleMouseEnter}
-            onMouseMove={handleMouseMove}
-            onMouseLeave={handleMouseLeave}
-            className={selectedUUID === button.uuid ? "selected" : ""}
+          onClick={() => handleButtonClick(button.uuid)}
+          className={selectedUUID === button.uuid ? "selected" : ""}
           >
             {button.label}
           </button>
         ))}
-        {tooltipVisible && (
-          <div
-            className="tooltip"
-            style={{ left: tooltipPosition.x, top: tooltipPosition.y }}
-          >
-            Choose this according to the Face Template you have chosen
-          </div>
-        )}
       </div>
+        </Tooltip>
     </div>
   );
 };

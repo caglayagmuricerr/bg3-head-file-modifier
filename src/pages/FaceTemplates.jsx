@@ -2,6 +2,8 @@ import React from "react";
 import FTCard from "../components/FaceTemplateCard";
 import EirlysImage from "../assets/images/card-images/Eirlys.png";
 import GizeImage from "../assets/images/card-images/Gize.png";
+import VanrieImage from "../assets/images/card-images/Vanrie.png";
+import RevnaImage from "../assets/images/card-images/Revna.png";
 
 const FaceTemplates = () => {
   const cardsData = [
@@ -17,6 +19,18 @@ const FaceTemplates = () => {
       link: "https://drive.google.com/file/d/16iMB70lIWlS3g9ryUnIOCRgUjzYnK8Nj/view?usp=sharing",
       text: "Elf, Feminine Body Type, Standard Body",
     },
+    {
+      image: VanrieImage,
+      imageName: "Vanrie",
+      link: "https://drive.google.com/file/d/15TH15VsGksYEsMK1pIrRTs-YEzDPQchH/view?usp=sharing",
+      text: "Half-Elf, Feminine Body Type, Standard Body",
+    },
+    {
+      image: RevnaImage,
+      imageName: "Revna",
+      link: "https://drive.google.com/file/d/1UqAJr0RzdNCqs87XNhS6kqn2q2b80y1z/view?usp=sharing",
+      text: "Elf, Feminine Body Type, Standard Body + Vampire Teeth",
+    }
   ];
 
   return (
@@ -35,7 +49,7 @@ const FaceTemplates = () => {
         </a>{" "}
         to customize.
         <br />
-        I recommend using one of my heads as a base to customize.
+        I don't recommend using in game heads as a base to customize.
         <br />
         These heads are already set up with the correct lods and do not
         require any additional work.

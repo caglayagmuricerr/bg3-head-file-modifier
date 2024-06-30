@@ -49,3 +49,20 @@ input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+input[type="file"]::-webkit-file-upload-button {
+  -webkit-appearance: none;
+  appearance: none;
+  background: var(--dark-pink);
+  color: rgb(255, 208, 208);
+  border: 5px dashed var(--light-pink);
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 10px 15px;
+  font-size: 1rem;
+}
+
+input[type="file"]::-webkit-file-upload-button:hover {
+  background: var(--dark-pink);
+  color: var(--light-pink);
+}

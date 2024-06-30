@@ -6,6 +6,7 @@ import VersionCalculator from "./VersionCalculator";
 import DisplayRaceID from "./DisplayRaceID";
 import HandleGenerator from "./HandleGenerator";
 import UUIDGenerator from "./UUIDGenerator";
+import Tooltip from "./utils/Tooltip";
 
 import "../styles/FileEditor.css";
 
@@ -36,9 +37,6 @@ const FileEditor = () => {
   const [locaXmlContent, setLocaXmlContent] = useState(null);
   const [visualsLsxContent, setVisualsLsxContent] = useState(null);
   const [_mergedLsfContent, setMergedLsfContent] = useState(null);
-
-  const [tooltipContent, setTooltipContent] = useState("");
-  const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
 
   const handleFileChange = (e) => {
     const selectedFiles = [];
@@ -294,56 +292,37 @@ const FileEditor = () => {
     });
   };
 
-  const handleTooltipShow = (content) => {
-    setTooltipContent(content);
-  };
-
-  const handleTooltipHide = () => {
-    setTooltipContent("");
-  };
-
-  const handleMouseMove = (e) => {
-    setTooltipPosition({ x: e.clientX + 10, y: e.clientY + 10 });
-  };
-
   return (
-    <div className="file-editor-container" onMouseMove={handleMouseMove}>
+    <div className="file-editor-container">
       <h3 className="start-editing">Start Editing!</h3>
       <div className="radio-group">
-        <input
-          type="radio"
-          id="vanilla"
-          name="fileType"
-          value="Template_Vanilla"
-          onChange={(e) => setOldWord(e.target.value)}
-          onMouseEnter={() =>
-            handleTooltipShow("Select this if you downloaded Vanilla template.")
-          }
-          onMouseLeave={handleTooltipHide}
-        />
+        <Tooltip
+          content={<div>Select this if you downloaded Vanilla Template</div>}
+        >
+          <input
+            type="radio"
+            id="vanilla"
+            name="fileType"
+            value="Template_Vanilla"
+            onChange={(e) => setOldWord(e.target.value)}
+          />
+        </Tooltip>
         <label htmlFor="vanilla">Vanilla Version</label>
-        <input
-          type="radio"
-          id="uniqueTav"
-          name="fileType"
-          value="Template_UTAV"
-          onChange={(e) => setOldWord(e.target.value)}
-          onMouseEnter={() =>
-            handleTooltipShow(
-              "Select this if you downloaded Unique Tav template."
-            )
+
+        <Tooltip
+          content={
+            <div>Select this if you downloaded Unique Tav template.</div>
           }
-          onMouseLeave={handleTooltipHide}
-        />
+        >
+          <input
+            type="radio"
+            id="uniqueTav"
+            name="fileType"
+            value="Template_UTAV"
+            onChange={(e) => setOldWord(e.target.value)}
+          />
+        </Tooltip>
         <label htmlFor="uniqueTav">Unique Tav Version</label>
-        {tooltipContent && (
-          <div
-            className="tooltip"
-            style={{ left: tooltipPosition.x, top: tooltipPosition.y }}
-          >
-            {tooltipContent}
-          </div>
-        )}
       </div>
       <div>
         <label>Mod Name </label>
@@ -353,15 +332,11 @@ const FileEditor = () => {
           onChange={(e) => setNewWord(e.target.value)}
           placeholder="Eirlys"
         />
-        <a
-          href="#"
-          onMouseEnter={() =>
-            handleTooltipShow("Your mod name on Mod Manager.")
-          }
-          onMouseLeave={handleTooltipHide}
-        >
-          <img src={questionmark} alt="Question Mark" />
-        </a>
+        <Tooltip content={<div>Mod name shown in Mod Manager.</div>}>
+          <a href="#">
+            <img src={questionmark} alt="Question Mark" />
+          </a>
+        </Tooltip>
       </div>
       <div>
         <label>Author </label>
@@ -371,15 +346,11 @@ const FileEditor = () => {
           onChange={(e) => setNewAuthor(e.target.value)}
           placeholder="Me Myself and I"
         />
-        <a
-          href="#"
-          onMouseEnter={() =>
-            handleTooltipShow("Author name shown in Mod Manager.")
-          }
-          onMouseLeave={handleTooltipHide}
-        >
-          <img src={questionmark} alt="Question Mark" />
-        </a>
+        <Tooltip content={<div>Author name shown in Mod Manager.</div>}>
+          <a href="#">
+            <img src={questionmark} alt="Question Mark" />
+          </a>
+        </Tooltip>
       </div>
       <div>
         <label>Description </label>
@@ -389,15 +360,15 @@ const FileEditor = () => {
           onChange={(e) => setNewDescription(e.target.value)}
           placeholder="She won Miss Faerun."
         />
-        <a
-          href="#"
-          onMouseEnter={() =>
-            handleTooltipShow("Brief description of your mod. You can leave this empty.")
+        <Tooltip
+          content={
+            <div>Brief description of your mod. You can leave this empty.</div>
           }
-          onMouseLeave={handleTooltipHide}
         >
-          <img src={questionmark} alt="Question Mark" />
-        </a>
+          <a href="#">
+            <img src={questionmark} alt="Question Mark" />
+          </a>
+        </Tooltip>
       </div>
       <div>
         <label>Body Shape </label>
@@ -422,13 +393,11 @@ const FileEditor = () => {
             />
             Strong Body
           </label>
-          <a
-            href="#"
-            onMouseEnter={() => handleTooltipShow("Select the body shape.")}
-            onMouseLeave={handleTooltipHide}
-          >
-            <img src={questionmark} alt="Question Mark" />
-          </a>
+          <Tooltip content={<div>Select the body shape.</div>}>
+            <a href="#">
+              <img src={questionmark} alt="Question Mark" />
+            </a>
+          </Tooltip>
         </div>
       </div>
       <label>Body Type </label>
@@ -454,13 +423,11 @@ const FileEditor = () => {
             />
             Feminine
           </label>
-          <a
-            href="#"
-            onMouseEnter={() => handleTooltipShow("Select the body type.")}
-            onMouseLeave={handleTooltipHide}
-          >
-            <img src={questionmark} alt="Question Mark" />
-          </a>
+          <Tooltip content={<div>Select the body type.</div>}>
+            <a href="#">
+              <img src={questionmark} alt="Question Mark" />
+            </a>
+          </Tooltip>
         </div>
       </div>
       <div>
@@ -471,60 +438,51 @@ const FileEditor = () => {
           onChange={(e) => setNewVersion64(e.target.value)}
           placeholder="36028797018963968"
         />
-        <a
-          href="#"
-          onMouseEnter={() =>
-            handleTooltipShow(
-              "Calculate the version of your mod below and paste it here."
-            )
+        <Tooltip
+          content={
+            <div>
+              Calculate the version of your mod below and paste it here.
+            </div>
           }
-          onMouseLeave={handleTooltipHide}
         >
-          <img src={questionmark} alt="Question Mark" />
-        </a>
+          <a href="#">
+            <img src={questionmark} alt="Question Mark" />
+          </a>
+        </Tooltip>
       </div>
       <div>
-        <a
-          href="#"
-          className="calculate-version"
-          onMouseEnter={() =>
-            handleTooltipShow(
-              "Start from 1.0.0.0 and update the version number or don't. I don't think it matters that much unless you are a serious modder."
-            )
+        <Tooltip
+          content={
+            <p>
+              Start from 1.0.0.0 and update the version number or don't.
+              <br />I don't think it matters that much unless you are a serious
+              modder.
+            </p>
           }
-          onMouseLeave={handleTooltipHide}
         >
-          <h2>Calculate Version</h2>
-        </a>
+          <a href="#" className="calculate-version">
+            <h2>Calculate Version</h2>
+          </a>
+        </Tooltip>
         <VersionCalculator />
       </div>
       <div>
         <DisplayRaceID setNewRaceUUID={setNewRaceUUID} />
       </div>
       <div>
-        <input
-          type="file"
-          webkitdirectory="true"
-          directory="true"
-          multiple
-          onChange={handleFileChange}
-          onMouseEnter={() =>
-            handleTooltipShow("Select files to include in the mod.")
-          }
-          onMouseLeave={handleTooltipHide}
-        />
+        <Tooltip content={<div>Select mod folder.</div>}>
+          <input
+            type="file"
+            webkitdirectory="true"
+            directory="true"
+            multiple
+            onChange={handleFileChange}
+          />
+        </Tooltip>
       </div>
       <button className="download-button" onClick={handleRenameAndDownload}>
         Download Files
       </button>
-      {tooltipContent && (
-        <div
-          className="tooltip"
-          style={{ left: tooltipPosition.x, top: tooltipPosition.y }}
-        >
-          {tooltipContent}
-        </div>
-      )}
     </div>
   );
 };

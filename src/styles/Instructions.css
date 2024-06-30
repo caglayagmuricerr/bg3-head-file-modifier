@@ -16,6 +16,10 @@
     border: 5px solid var(--dark-pink);
 }
 
+.choose-template {
+    margin-bottom: 20px;
+}
+
 .tooltip {
     position: fixed;
     background-color: var(--mid-orange);
@@ -53,7 +57,7 @@
 
 .other-res {
     position: fixed;
-    top: 100px;
+    top: 50px;
     right: 10px;
     padding: 10px 20px 30px 20px;
     border: none;
