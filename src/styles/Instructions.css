@@ -51,15 +51,11 @@
     background-color: var(--dark-orange);
 }    
 
-
-
-
-
 .other-res {
     position: fixed;
     top: 100px;
     right: 10px;
-    padding: 10px;
+    padding: 10px 20px 30px 20px;
     border: none;
     border-radius: 2vw;
     width: 20%;

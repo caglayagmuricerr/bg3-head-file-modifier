@@ -392,7 +392,7 @@ const FileEditor = () => {
         <a
           href="#"
           onMouseEnter={() =>
-            handleTooltipShow("Brief description of your mod.")
+            handleTooltipShow("Brief description of your mod. You can leave this empty.")
           }
           onMouseLeave={handleTooltipHide}
         >

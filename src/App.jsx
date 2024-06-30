@@ -4,7 +4,6 @@ import "./App.css";
 
 import Home from "./pages/Home";
 import FaceTemplates from "./pages/FaceTemplates";
-import FaceDetail from "./pages/FaceDetail";
 import Credits from "./pages/Credits";
 import HeartBg from "./components/HeartBg";
 
@@ -35,7 +34,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/face-templates" element={<FaceTemplates />} />
-          <Route path="/face-templates/:imageName" element={<FaceDetail/>} />
           <Route path="/credits" element={<Credits />} />
         </Routes>
       </Router>

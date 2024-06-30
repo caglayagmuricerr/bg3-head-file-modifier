@@ -1,7 +1,7 @@
 .head-card {
     display: flex;
     align-items: center;
-    margin: 10px 0;
+    margin: 10px 20px;
     padding: 10px 30px 10px 15px;
     border: 5px solid var(--dark-pink);
     border-radius: 15px;
@@ -9,13 +9,14 @@
 }
 
 .head-card:hover {
-    background-color: var(--pink);
+    background-color: var(--dark-pink);
+    border: 5px solid var(--light-pink);
 }
 
 .details-button {
     text-decoration: none;
     padding: 10px;
-    margin:0px;
+    margin: 0px;
     margin-left: 20px;
     background-color: var(--dark-pink);
     color: var(--light-pink);
@@ -63,6 +64,34 @@
 
 .full-size-image {
     border-radius: 20px;
-    width: 300px;
+    width: 350px;
     height: auto;
+}
+
+.two-column-layout {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+
+.download-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.temp-download-btn {
+    display: inline-block;
+    padding: 50px 30px;
+    text-align: center;
+    background-color: var(--dark-pink);
+    color: var(--light-pink);
+    border: 5px solid var(--darker-pink);
+    border-radius: 15px;
+    font-size: 18px;
+}
+
+.temp-download-btn:hover {
+    background-color: var(--light-pink);
+    color: var(--darker-pink);
 }
