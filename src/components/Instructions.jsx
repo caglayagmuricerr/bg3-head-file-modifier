@@ -78,7 +78,7 @@ const Instructions = () => {
           }}
           width="500"
           height="315"
-          src="https://www.youtube.com/embed/NpEaa2P7qZI"
+          src="https://youtube.com/embed/IXT4Nrk52rw"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
