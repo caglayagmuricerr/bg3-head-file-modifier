@@ -9,7 +9,7 @@ const Navbar = () => {
           Home
         </NavLink>
         <NavLink to="/face-templates" className="nav-item" activeClassName="active">
-          FaceTemplates
+          Face Templates
         </NavLink>
         <NavLink to="/credits" className="nav-item" activeClassName="active">
           Credits
