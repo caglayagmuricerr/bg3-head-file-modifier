@@ -82,6 +82,7 @@
 
 .temp-download-btn {
     display: inline-block;
+        
     padding: 50px 30px;
     text-align: center;
     background-color: var(--dark-pink);

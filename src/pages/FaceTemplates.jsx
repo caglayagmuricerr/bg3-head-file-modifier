@@ -1,63 +1,74 @@
 import React from "react";
 import FTCard from "../components/FaceTemplateCard";
-import EirlysImage from "../assets/images/card-images/Eirlys.png";
-import GizeImage from "../assets/images/card-images/Gize.png";
-import VanrieImage from "../assets/images/card-images/Vanrie.png";
-import RevnaImage from "../assets/images/card-images/Revna.png";
+import TemplateImage from "../assets/images/card-images/Template.gif";
+import EirlysImage from "../assets/images/card-images/Eirlys.gif";
+import GizeImage from "../assets/images/card-images/Gize.gif";
+import VanrieImage from "../assets/images/card-images/Vanrie.gif";
+import RevnaImage from "../assets/images/card-images/Revna.gif";
+import DilaraImage from "../assets/images/card-images/Dilara.gif";
 
 const FaceTemplates = () => {
   const cardsData = [
     {
+      image: RevnaImage,
+      imageName: "Revna",
+      link: "https://drive.google.com/file/d/1HDzk2L7X64KTWPLSt3WFP8R5JJD1yKEI/view?usp=sharing",
+      text: "Elf, Feminine Body Type, Standard Body + Vampire Teeth",
+    },
+    {
+      image: VanrieImage,
+      imageName: "Vanrie",
+      link: "https://drive.google.com/file/d/1OeabybZl_RSZXosfiv0ROXbPsDMjMKJ2/view?usp=sharing",
+      text: "Half-Elf, Feminine Body Type, Standard Body",
+    },
+    {
       image: EirlysImage,
       imageName: "Eirlys",
-      link: "https://drive.google.com/file/d/1dyso-IXo_zotspDhBwvJVrGG9AEFbVxJ/view?usp=sharing",
+      link: "https://drive.google.com/file/d/1xR-wyCOzzIa8AXSRcOVkIZ3lwvtTwBCz/view?usp=sharing",
       text: "Human, Feminine Body Type, Standard Body",
     },
     {
       image: GizeImage,
       imageName: "Gize",
-      link: "https://drive.google.com/file/d/16iMB70lIWlS3g9ryUnIOCRgUjzYnK8Nj/view?usp=sharing",
+      link: "https://drive.google.com/file/d/1XkZ8OUYvm4MfrtS612dki0R8WlFzoKFm/view?usp=sharing",
       text: "Elf, Feminine Body Type, Standard Body",
     },
     {
-      image: VanrieImage,
-      imageName: "Vanrie",
-      link: "https://drive.google.com/file/d/15TH15VsGksYEsMK1pIrRTs-YEzDPQchH/view?usp=sharing",
-      text: "Half-Elf, Feminine Body Type, Standard Body",
-    },
-    {
-      image: RevnaImage,
-      imageName: "Revna",
-      link: "https://drive.google.com/file/d/1UqAJr0RzdNCqs87XNhS6kqn2q2b80y1z/view?usp=sharing",
+      image: DilaraImage,
+      imageName: "Dilara",
+      link: "https://drive.google.com/file/d/1Spdu2zZ0UxeRmj1Hj67K1pPVr4Rpelbo/view?usp=sharing",
       text: "Elf, Feminine Body Type, Standard Body + Vampire Teeth",
-    }
+    },
   ];
 
   return (
     <div>
-      <h1>Face Templates</h1>
-      <p>
-        Choose a face template to replace in files.
-        <br />
-        Or choose a {" "}
-        <a
-          href="https://drive.google.com/file/d/1UqAJr0RzdNCqs87XNhS6kqn2q2b80y1z/view?usp=sharing"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          head within the game
-        </a>{" "}
-        to customize.
-        <br />
-        I don't recommend using in game heads as a base to customize.
-        <br />
-        These heads are already set up with the correct lods and do not
-        require any additional work.
-      </p>
-      <div className="cards-container">
+      <div style={{ display: "flex", alignItems: "center", gap: "60px" }}>
+        <div>
+          <img src={TemplateImage} alt="Template" style={{ width: "180px", borderRadius: "10px", marginLeft: "25px", marginTop: "50px"}} />
+        </div>
+        <div>
+          <p style={{ marginTop:"50px"}}>
+           ・୨୧・ Choose a face template to replace in files.
+            <br />
+            ・୨୧・ If you downloaded a file template (Vanilla or UTAV), 
+            <br />
+            it includes Shadowheart by default, but with longer lashes.
+            <br />
+            ・୨୧・ You can replace her face with the faces here.
+            <br />
+            ・୨୧・ You are welcome to create and publish your own mod, as long as you give me credit.
+          </p>
+        </div>
+      </div>
+      <div className="cards-container" style={{ marginTop: "40px" }}>
+        <h1>⋆ ˚｡⋆୨୧˚・Face Templates・˚୨୧⋆｡˚ ⋆</h1>
         {cardsData.map((card, index) => (
           <FTCard
+            key={index}
             image={card.image}
+            xOffset={50}
+            yOffset={-200}
             imageName={card.imageName}
             link={card.link}
             text={card.text}
