@@ -1,0 +1,43 @@
+.banner {
+    font-size: 1.5em;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    animation: flash 1s infinite;
+}
+
+@keyframes flash {
+    0%, 100% {
+        color: var(--mid-orange);
+    }
+    50% {
+        color: var(--yellow);
+    }
+}
+
+.flashing-svg path {
+    animation: svg-flash 1s infinite;
+}
+
+@keyframes svg-flash {
+    0%, 100% {
+        fill: var(--mid-orange);
+    }
+    50% {
+        fill: var(--yellow);
+    }
+}
+
+.banner svg:first-child{
+    width: 50px;
+    padding-right: 10px;
+    position: relative;
+    top: 15px;
+}
+
+.banner svg:last-child{
+    width: 50px;
+    padding-left: 10px;
+    position: relative;
+    top: 15px;
+}

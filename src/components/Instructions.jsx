@@ -112,7 +112,7 @@ const Instructions = () => {
       <div className="choose-template">
       <a
         className="template-btn"
-        href="https://drive.google.com/file/d/1Tyjxih0Fl-kL2ZjQXMjF3sxIc6ARLG9F/view?usp=sharing"
+        href="https://drive.google.com/file/d/1i_7GyLbt2_X_B0MAFhVzVJjdp8zXciKe/view?usp=sharing"
         target="_blank"
         rel="noopener noreferrer"
         onMouseEnter={() =>
@@ -126,7 +126,7 @@ const Instructions = () => {
       </a>
       <a
         className="template-btn"
-        href="https://drive.google.com/file/d/1qVqZnbhta-5y6Pgg0ouIwhInm83gjca_/view?usp=sharing"
+        href="https://drive.google.com/file/d/12-1H1xZjgU1PmRxmUPjmiUaZUkNxHW6u/view?usp=sharing"
         target="_blank"
         rel="noopener noreferrer"
         onMouseEnter={() =>
