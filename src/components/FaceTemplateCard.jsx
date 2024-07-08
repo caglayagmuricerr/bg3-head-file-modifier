@@ -1,7 +1,15 @@
 import React, { useState } from "react";
 import "../styles/FTCard.css";
 
-const FaceTemplateCard = ({ image, xOffset, yOffset, imageName, link, text }) => {
+const FaceTemplateCard = ({
+  image,
+  gif,
+  xOffset,
+  yOffset,
+  imageName,
+  link,
+  text,
+}) => {
   const [isTooltipVisible, setTooltipVisible] = useState(false);
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
 
@@ -47,7 +55,7 @@ const FaceTemplateCard = ({ image, xOffset, yOffset, imageName, link, text }) =>
             className="hover-display-image"
             style={{ left: tooltipPosition.x, top: tooltipPosition.y }}
           >
-            <img src={image} alt={imageName} className="full-size-image" />
+            <img src={gif} alt={imageName} className="full-size-image" />
           </div>
         )}
       </div>
