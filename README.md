@@ -2,7 +2,7 @@
 
 This project is a simple XML editor built with React, designed to simplify the process of modding a custom head for Baldurs Gate 3.
 
-<a href="https://main.d29j021u0md6zq.amplifyapp.com/"><strong>Go To Live Website »</strong></a>
+<a href="https://bg3customhead.top/"><strong>Go To Live Website »</strong></a>
 
 ![YEAH](https://github.com/caglayagmuricerr/bg3-head-file-modifier/blob/main/yeah.png)
 
